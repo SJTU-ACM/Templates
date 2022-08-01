@@ -1,0 +1,41 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+\usepackage{fancyhdr}  % 页眉页脚
+\usepackage{minted}    % 代码高亮
+\usepackage[colorlinks]{hyperref}  % 目录可跳转
+\setlength{\headheight}{15pt}
+\usepackage{pdfpages}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+% 定义页眉页脚
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{Algorithm Library by NEW CODE!!}
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\setminted[cpp]{
+	tabsize=4,
+	fontsize=\small,
+	breaklines=true,
+	breakbytoken=true,
+}
+
+\author{NEW CODE!!}   
+\title{Template Library}
+
+\begin{document} 
+	\maketitle % 封面
+	\newpage % 换页
+	\newpage
+	\tableofcontents % 目录
+	\newpage
+	\input{computational_geometry/computational_geometry.tex}
+	\input{string/string.tex}
+	\input{data-structure/data-structure.tex}
+	\input{graph-theory/graph-theory.tex}
+	\input{math/math.tex}
+	\input{hint/hint.tex}
+	
+\end{document}
